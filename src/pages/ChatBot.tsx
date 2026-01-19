@@ -14,10 +14,10 @@ const Chatbot: React.FC = () => {
     setMessages(prev => [...prev, { text: trimmed, sender: 'user' }]);
     setMessage('');
 
-    // Simulate AI Response
+
     setTimeout(() => {
       setMessages(prev => [...prev, {
-        text: 'This is a simulated AI response. In a real implementation, this would connect to an AI service.',
+        text: 'I am sorry they happened. I am working hard right now to fix the situation and make sure it doesnt happen again.',
         sender: 'ai',
       }]);
     }, 1000);
@@ -34,9 +34,8 @@ const Chatbot: React.FC = () => {
     <div style={{ paddingBottom: "70px" }} className="dashboard-container">
 
 
-      {/* Main Content */}
       <main className="main-content">
-        {/* Chat Area */}
+
         <div className="chat-container">
           {messages.length === 0 ? (
             <div className="empty-state">
@@ -59,10 +58,11 @@ const Chatbot: React.FC = () => {
           )}
         </div>
 
-        {/* Input Area */}
+
         <div className="input-container">
           <div className="input-wrapper">
             <input
+              
               type="text"
               className="chat-input"
               placeholder="Ask AI assistant"

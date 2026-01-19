@@ -9,7 +9,7 @@ function layout() {
      <div style={{
        display: 'grid',
        gridTemplateColumns: '210px 1fr',  
-       gridTemplateRows: '70px 1fr',       
+       gridTemplateRows: '75px 1fr',       
        height: '100vh',
        width: '100vw',
        margin: 0,

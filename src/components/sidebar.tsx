@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Users, Plus, Settings, LogOut } from 'lucide-react';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/light logo.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function DoxaSidebar() {
@@ -10,7 +10,7 @@ export default function DoxaSidebar() {
 const menuItems = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, path: '/Dashboard' },
   { id: 'client-log', label: 'Client Log', icon: Users, path: '/client-log' },
-  { id: 'ai-log', label: 'AI Log', icon: Plus, path: '/ai-log' },
+  { id: 'ai-log', label: 'AI Log', icon: Plus, path: '/ChatBot' },
 ];
 
   const styles = {
@@ -27,7 +27,7 @@ const menuItems = [
     },
     logoSection: {
       padding: '19px',
-      borderBottom: '1px solid rgba(59, 130, 246, 0.2)',
+      borderBottom: '1px solid #3b82f633',
     },
     logoContainer: {
       display: 'flex',
@@ -40,8 +40,8 @@ const menuItems = [
       objectFit: 'contain' as const,
     },
     logoText: {
-      fontSize: '20px',
-      fontWeight: '600',
+      fontSize: '27.1px',
+      fontWeight: '630',
       marginLeft: '4px',
     },
     nav: {
@@ -60,9 +60,9 @@ const menuItems = [
       gap: '12px',
       padding: '10px 16px',
       borderRadius: '8px',
-      backgroundColor: isActive ? '#2563eb' : 'transparent',
+      border: isActive ? '2px solid #2563eb' : 'none',
+      backgroundColor: isActive ? 'transparent' : 'transparent',
       color: isActive ? '#ffffff' : '#d1d5db',
-      border: 'none',
       cursor: 'pointer',
       fontSize: '14px',
       transition: 'all 0.2s ease',
@@ -76,7 +76,7 @@ const menuItems = [
       gap: '12px',
     },
     userCard: {
-      backgroundColor: '#2563eb',
+      backgroundColor: '#153579',
       borderRadius: '8px',
       padding: '12px',
       display: 'flex',
@@ -87,7 +87,7 @@ const menuItems = [
       width: '32px',
       height: '32px',
       borderRadius: '50%',
-      backgroundColor: '#3b82f6',
+      backgroundColor: '#142c54',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -152,6 +152,7 @@ const menuItems = [
               <button
                 key={item.id}
                 onClick={() => navigate(item.path)}
+                // onMouseOver={}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={styles.menuButton(isActive)}
@@ -175,7 +176,7 @@ const menuItems = [
           style={styles.bottomButton}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          onClick={() => navigate('/settings')}
+          // onClick={() => navigate('/settings')}/
         >
           <Settings size={16} />
           <span>Settings</span>

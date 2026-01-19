@@ -94,7 +94,6 @@ const ClientLogForm: React.FC = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="client-form">
-          {/* Client's Full Name */}
           <div className="form-group">
             <label htmlFor="fullName">Client's Full Name</label>
             <input
@@ -108,7 +107,6 @@ const ClientLogForm: React.FC = () => {
             />
           </div>
 
-          {/* Client's Email */}
           <div className="form-group">
             <label htmlFor="email">Client's Email</label>
             <input
@@ -122,7 +120,6 @@ const ClientLogForm: React.FC = () => {
             />
           </div>
 
-          {/* Client's Phone Number */}
           <div className="form-group">
             <label htmlFor="phoneNumber">Client's Phone Number</label>
             <input
@@ -136,7 +133,6 @@ const ClientLogForm: React.FC = () => {
             />
           </div>
 
-          {/* Client's ID Number */}
           <div className="form-group">
             <label htmlFor="idNumber">Client's ID Number</label>
             <input
@@ -150,7 +146,6 @@ const ClientLogForm: React.FC = () => {
             />
           </div>
 
-          {/* Type of Client */}
           <div className="form-group">
             <label>Type of Client</label>
             <div className="radio-group">
@@ -177,7 +172,6 @@ const ClientLogForm: React.FC = () => {
             </div>
           </div>
 
-          {/* Type of Troubleshoot */}
           <div className="form-group">
             <label>Type of Troubleshoot</label>
             <div className="checkbox-group">
@@ -195,7 +189,6 @@ const ClientLogForm: React.FC = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <div className="form-actions">
             <button type="submit" className="submit-btn">
               Submit Form

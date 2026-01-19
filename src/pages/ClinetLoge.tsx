@@ -149,7 +149,6 @@ const ClientLog: React.FC = () => {
         </section>
       </div>
 
-      {/* MODAL FORM */}
       {showForm && (
         <div className="modal-overlay" onClick={() => setShowForm(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

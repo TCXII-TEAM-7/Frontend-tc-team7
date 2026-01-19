@@ -1,6 +1,6 @@
 :root {
   --bg-dark: #090a1f;
-  --bg-gradient: linear-gradient(135deg, #0f1129 0%, #060714 100%);
+  --bg-gradient: radial-gradient(circle at bottom center, #125261a9 , #010323);
   --sidebar-color: #050614;
   --accent-cyan: #00f2ff;
   --accent-blue: #2d33ff;
@@ -15,7 +15,7 @@
   height: 100%;
   padding: 2rem;
   overflow-y: auto;
-  background: var(--bg-gradient);
+  background: #0a0a2e;
   color: var(--text-main);
 }
 
@@ -79,6 +79,7 @@
   
   width: auto;
   height: 220px;
+  max-height: 220px;
   max-width: 600px;
   background: var(--card-bg);
   border: 1px solid var(--border-light);
@@ -93,7 +94,7 @@
 .dashboard-image {
   scale: 0.95;
   width: 100%;
-  height: auto;
+  height: 215px;
   filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.2));
 }
 

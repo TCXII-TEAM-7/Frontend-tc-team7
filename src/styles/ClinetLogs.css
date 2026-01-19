@@ -64,10 +64,17 @@ html, body {
   cursor: pointer;
 }
 
+
+  
+
 .btn-primary {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+  border-radius: 10px;
+  background-color: rgb(26, 15, 90);
+  display: flex;
+  border: 1px solid rgba(193, 213, 245, 1);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
@@ -78,7 +85,6 @@ html, body {
 
 
 
-/* الخط العرضي */
 .custom-hr {
   border: 0;
   height: 1px;
@@ -127,7 +133,6 @@ html, body {
 .status-badge.resolved { background: #1b5e20; }
 .status-badge.pending { background: #e65100; }
 
-/* Images Section */
 .images-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -174,7 +179,6 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Chart Section */
 .chart-section {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -195,7 +199,6 @@ html, body {
   color: #ffffff;
 }
 
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -246,9 +249,6 @@ html, body {
   transition: all 0.2s ease;
 }
 
-
-
-/* Form Styles */
 .client-form {
   display: flex;
   flex-direction: column;

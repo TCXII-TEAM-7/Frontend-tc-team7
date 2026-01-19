@@ -4,98 +4,114 @@
     box-sizing: border-box;
 }
 body{
-    min-width: 1060px;
+    min-height: 600px;
     height: 100vh;
+    min-width: 450px;
     overflow: hidden;
 }
 
 .main{
-    display: flex;
-    flex-direction: row;
+    background-color: #EEF5F7;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
     overflow: hidden;
-    justify-content: space-between;
+}
+
+.sideimg{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 460px;
 }
 
 .DOXAimg{
-    height: 100vh;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .inscription{
-    width: 50%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.container {
+    width: 100%;
+} 
 
 .form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 430px;
     height: 500px;
+    min-width: 400px;
+    max-width: 550px;
     padding: 20px;
+    margin: auto;
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
+    background-color: transparent;
 }
 
-.form h2 {
-
+.welcomeBack{
+    display:flex;
     text-align: left;
+    flex-direction:row;
+    align-content: center;
     color: #01054E;
-    margin-bottom: 70px;
+    height:30px;
+    margin-bottom:50px ;
+    gap:15px;
+}          
+
+.welcomeBack img:first-of-type{
+    height: 28px;
+    width: 29px;
 }
+
+
+.welcomeBack img:nth-of-type(2){
+        display: none;
+    }
 
 label{
     font-family:noto-sans, sans-serif;
     font-weight: 700;
     font-size: 13px;
+    color: #01054E;
     margin-left: 15px;
-
+    margin-bottom: 2px;
 }
 
-.fp a{
+.forgetpassword a{
     font-size: 13px;
     margin-left: 15px;
     color: #666677;
     text-decoration: none;
 }
-.fp a:hover{
+.forgetpassword a:hover{
     text-decoration: underline;
-}
-
-.fp{
-    margin-bottom: 70px;
-
 }
 
 .inputs{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #emailInput{
-    margin: 10px 0;
     padding: 15px 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 30px;
-    
 }
 
 #passwordInput{
-    margin: 10px 0;
     padding: 15px 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 0px;
 }
 
 #passwordInput:focus ,#emailInput:focus {
@@ -105,7 +121,7 @@ label{
 
 
 button {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     padding: 15px 10px;
     background-color: #030861;
     color: white;
@@ -118,8 +134,16 @@ button {
 }
 
 button:hover {
-    background-image: linear-gradient(45%,#030a93 , #0d17d7  , #0610cf);
-    background-color: #030a93;
+    background-color: #2129c8;
+}
+
+.errorHolder{
+    color: red;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #fee;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .error-message {
@@ -130,4 +154,40 @@ button:hover {
     background-color: #fee2e2;
     border-left: 3px solid #ef4444;
     border-radius: 4px;
+}
+
+
+@media (max-width: 720px) {
+    .main{
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .welcomeBack{
+    height: fit-content;
+    display:flex;
+    flex-direction: none;
+    align-content: center;
+    justify-content: center;
+    margin-bottom:30px ;
+    }
+    .welcomeBack h2{
+        display: none;
+    }
+    .welcomeBack img:nth-of-type(1){
+        display:none;
+    }
+    .welcomeBack img:nth-of-type(2){
+        display: inline;
+        scale:0.5;
+    }
+
+    .sideimg{
+        display: none;
+    }
 }
